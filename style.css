@@ -51,9 +51,27 @@ h1 {
     justify-content: center;
 }
 
-.main {}
+.main {
+    border: 2px solid grey;
+    background-color: rgb(96, 190, 177);
+    opacity: 0.8;
+    padding-left: 2%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+}
 
 li {
     list-style-type: square;
-    margin-left: 10px;
+    margin: 2px
 }
+
+.Register {
+    font-size: 20px;
+    text-shadow: 2px 4px 4px rgba(12, 8, 8, 0.6);
+    font-weight: bolder;
+}
+
+.btn {}
