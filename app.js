@@ -67,7 +67,9 @@ $.getJSON("https://api.ipify.org?format=json", function (data) {
 
 const successCallback = (position) => {
     console.log(position);
-    locations.innerText = position.coords.latitude
+    let lat = position.coords.latitude
+    let long = position.coords.longitude
+    locations.innerHTML = 'Latitude: ' + lat + "<br>" + 'Longitude:' + long
 }
 
 const errorCallback = (error) => {
