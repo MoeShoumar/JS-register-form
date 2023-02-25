@@ -6,6 +6,7 @@ const password = document.querySelector('#password');
 const form = document.querySelector('#form');
 const error = document.querySelector('#error');
 const locations = document.querySelector('#locations');
+const second_page = document.querySelector('.second_page');
 
 
 // Email and password validation
@@ -77,5 +78,13 @@ const errorCallback = (error) => {
 };
 
 navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+// Scroll alert
 
+let hasAlerted = false;
 
+window.addEventListener("scroll", () => {
+    if (!hasAlerted && (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400)) {
+        alert('Are you sure you want to continue?!');
+        hasAlerted = true;
+    }
+});
