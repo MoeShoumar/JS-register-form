@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.first_page {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("assets/3.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+}
+
+h1 {
+    color: rgb(150, 204, 204)
+}
+
+.scroll {}
+
+/* .first_page {
+    height: 100vh;
+    width: 100vw;
+}
+
+.bc_1 {
+    background-size: cover;
+} */
+
+.second_page {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("assets/bc2.jpg");
+    opacity: 0.9;
+
+}
