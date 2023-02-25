@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 
@@ -13,24 +14,33 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
-
 }
 
 h1 {
-    color: rgb(150, 204, 204)
+    color: rgb(203, 224, 219);
+    font-size: 40px;
+    text-shadow: 20px solid rgb(0, 0, 0);
+    position: absolute;
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.6);
 }
 
-.scroll {}
 
-/* .first_page {
-    height: 100vh;
-    width: 100vw;
+.scroll {
+    color: rgb(171, 223, 210);
+    margin-top: 25%;
+    font-size: 30px;
+    text-shadow: 20px solid rgb(0, 0, 0);
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.6);
 }
 
-.bc_1 {
-    background-size: cover;
-} */
+.exclamation {
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+    line-height: 2;
+    padding: 0 0 0 20px;
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.6);
+}
 
 .second_page {
     height: 100vh;
