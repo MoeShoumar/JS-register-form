@@ -49,6 +49,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .main {
@@ -74,4 +75,17 @@ li {
     font-weight: bolder;
 }
 
-.btn {}
+.btn {
+    margin-top: 15px;
+    border-radius: 10%;
+    padding: 20px;
+    width: 15%;
+}
+
+button {
+    border-radius: 20%;
+    padding: 10px;
+    background-color: rgb(171, 214, 214);
+    opacity: 0.6;
+    font-style: oblique;
+}
