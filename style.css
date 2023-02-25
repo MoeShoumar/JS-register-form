@@ -43,7 +43,7 @@ h1 {
 }
 
 .second_page {
-    height: 100vh;
+    height: 120vh;
     width: 100vw;
     background-image: url("assets/bc2.jpg");
     display: flex;
@@ -65,7 +65,7 @@ h1 {
 }
 
 li {
-    list-style-type: square;
+    list-style-type: circle;
     margin: 2px
 }
 
