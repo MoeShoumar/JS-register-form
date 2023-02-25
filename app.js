@@ -41,4 +41,23 @@ form.addEventListener('submit', (e) => {
 
 })
 // save data into a json
-let h = new Cousrse()
+// let h = new Cousrse()
+
+
+// Ip-Location
+let sum = 0
+$.getJSON("https://api.ipify.org?format=json", function (data) {
+    // Setting text of element P with id gfg
+    $("#gfg").html(data.ip);
+    console.log(data.ip);
+    let ip = (data.ip).split('.')
+    console.log(ip);
+    for (let nmbs of ip) {
+        if (nmbs % 2 == 0) {
+            sum = sum + parseInt(nmbs)
+        }
+    }
+    console.log(data.ip)
+    console.log(sum)
+})
+
