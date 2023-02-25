@@ -5,17 +5,25 @@ const email = document.querySelector('#email');
 const password = document.querySelector('#password');
 const form = document.querySelector('#form');
 const error = document.querySelector('#error');
-const specialChar = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
 
 // Email validation
+const specialChar = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
+const upperCase = /[A-Z]/;
+const mail_check = /@/;
+const mail_check_dashes = /-/;
+
+
 form.addEventListener('submit', (e) => {
     let massages = []
-    if (email.value === '' || email.value === null || email.value === '') {
-        massages.push('wrong email or password format!')
+    if (email.value === '' || email.value === null ||
+        email.value === '' || !mail_check.test(email.value) ||
+        mail_check_dashes.test(email.value)) {
+        massages.push('wrong email format!')
     }
     if (password.value === '' || password.value === null
-        || password.value.length < 8) {
-        massages.push('wrong email or password format!')
+        || password.value.length < 8 || !specialChar.test(password.value)
+        || !upperCase.test(password.value)) {
+        massages.push('wrong  password format!')
     }
     if (massages.length > 0) {
         e.preventDefault()
