@@ -6,14 +6,15 @@ const password = document.querySelector('#password');
 const form = document.querySelector('#form');
 const error = document.querySelector('#error');
 
-// Email validation
+// Email and password validation
 const specialChar = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
 const upperCase = /[A-Z]/;
 const mail_check = /@/;
 const mail_check_dashes = /-/;
 
-
+let saved_data = []
 form.addEventListener('submit', (e) => {
+    e.preventDefault()
     let massages = []
     if (email.value === '' || email.value === null ||
         email.value === '' || !mail_check.test(email.value) ||
@@ -29,13 +30,15 @@ form.addEventListener('submit', (e) => {
         e.preventDefault()
         error.innerHTML = massages.join(', ')
     }
+    else {
+        let saved = {
+            email: email.value,
+            password: password.value
+        }
+        saved_data.push(saved);
+        console.log(saved_data);
+    }
+
 })
-// let validateForm = () =>
-
-//     function validateForm() {
-//         if (email.innerHTML
-//     }
-
-// Password should contain 8 characters minimum, one special character minimum,
-//  at least one upper case letter,  etc.
-// An email should have also the email format: @, no dashes, a "dot" somewhere after the @.
+// save data into a json
+let h = new Cousrse()
