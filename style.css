@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
+
 }
 
 
@@ -43,12 +44,12 @@ h1 {
 }
 
 .second_page {
-    height: 120vh;
+    /* height: 100vh; */
     width: 100vw;
     background-image: url("assets/bc2.jpg");
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: column;
 }
 
@@ -65,8 +66,9 @@ h1 {
 }
 
 li {
-    list-style-type: circle;
-    margin: 2px
+    margin: 2px;
+    font-size: 15px;
+    list-style-type: disc;
 }
 
 .Register {
@@ -79,8 +81,8 @@ li {
     margin-top: 15px;
     border-radius: 10%;
     padding: 20px;
-    width: 15%;
-    display: flex;
+    /* width: 15%; */
+    /* display: flex; */
 }
 
 button {

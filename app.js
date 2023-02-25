@@ -5,6 +5,8 @@ const email = document.querySelector('#email');
 const password = document.querySelector('#password');
 const form = document.querySelector('#form');
 const error = document.querySelector('#error');
+const locations = document.querySelector('#locations');
+
 
 // Email and password validation
 const specialChar = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
@@ -57,7 +59,21 @@ $.getJSON("https://api.ipify.org?format=json", function (data) {
             sum = sum + parseInt(nmbs)
         }
     }
-    console.log(data.ip)
-    console.log(sum)
+    console.log("IP-even= " + data.ip)
+    console.log("IP-even-sum= " + sum)
 })
+
+// Location:
+
+const successCallback = (position) => {
+    console.log(position);
+    locations.innerText = position.coords.latitude
+}
+
+const errorCallback = (error) => {
+    console.log(error);
+};
+
+navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+
 
