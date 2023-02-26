@@ -7,6 +7,8 @@ const form = document.querySelector('#form');
 const error = document.querySelector('#error');
 const locations = document.querySelector('#locations');
 const second_page = document.querySelector('.second_page');
+const num_btn = document.querySelector('#num_btn');
+
 
 
 // Email and password validation
@@ -90,3 +92,18 @@ window.addEventListener("scroll", () => {
 });
 
 // merge sort for promt
+num_btn.addEventListener('click', function merging() {
+    let arr = prompt("Enter 10 numbers").split(",")
+    arr = arr.map(Number);
+    console.log(arr);
+})
+
+const half = array.length / 2
+
+// Base case or terminating case
+if (array.length < 2) {
+    return array
+}
+
+const left = array.splice(0, half)
+return merge(prompt(left), prompt(array))
