@@ -124,7 +124,7 @@ window.addEventListener("scroll", () => {
     }
 });
 
-// merge sort for promt
+// merge sort for promt (used chatGPT a lot on this one!)
 function merge(left, right) {
     let result = []
     let i = 0
@@ -167,7 +167,7 @@ num_btn.addEventListener('click', function () {
 const Name = document.getElementById('Name');
 const CRN = document.getElementById('CRN');
 const Duration = document.getElementById('Duration');
-
+const form_2 = document.getElementById('form_2');
 class Course {
     constructor(Name, CRN, Duration) {
         this.Name = Name
@@ -176,6 +176,16 @@ class Course {
     }
 }
 
+form_2.addEventListener('submit', function (e) {
+    e.preventDefault()
+    const crn = CRN.value;
+    const duration = Duration.value;
+    const name = Name.value;
+    const myCourse = new Course(name, crn, duration);
+    console.log(myCourse);
+}
+
+)
 
 //  reverse word
 
@@ -198,4 +208,4 @@ reverse.addEventListener('click', function () {
 // I didn't know how to continue this, I know I need to rejoin
 //  the numbers and letters again but I don't know how
 
-// 
+// reverse word-2
