@@ -10,6 +10,8 @@ const second_page = document.querySelector('.second_page');
 const num_btn = document.querySelector('#num_btn');
 const age = document.querySelector('#age');
 const phone = document.querySelector('#phone');
+const string = document.querySelector('#string');
+const car_model = document.querySelector('#car_model');
 const reverse = document.querySelector('#str1_btn');
 
 // Email and password validation
@@ -66,7 +68,8 @@ form.addEventListener('submit', (e) => {
             password: password.value,
             birth_year: ageValue,
             phone: phone.value,
-            phone: phone.value,
+            car_model: car_model.value,
+            string: string.value
 
         };
         saved_data.push(saved);
@@ -182,5 +185,17 @@ reverse.addEventListener('click', function () {
     if (!str_1_check.test(str_1.valueOf) || str_1 === '' || str_1 === null) {
         alert('Enter a combo of letters and numbers for the trick to work!');
     }
+    else {
+        const splitted = str_1.split('')
+        const nums = splitted.filter(function isDigit(char) {
+            return str_1_check.test(splitted)
+        })
+        nums.reverse()
+        const reversed_nums = splitted.map
+    }
 
-}) 
+})
+// I didn't know how to continue this, I know I need to rejoin
+//  the numbers and letters again but I don't know how
+
+// 
