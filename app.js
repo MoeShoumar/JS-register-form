@@ -9,6 +9,7 @@ const locations = document.querySelector('#locations');
 const second_page = document.querySelector('.second_page');
 const num_btn = document.querySelector('#num_btn');
 const age = document.querySelector('#age');
+const phone = document.querySelector('#phone');
 
 
 // Email and password validation
@@ -63,7 +64,10 @@ form.addEventListener('submit', (e) => {
         let saved = {
             email: email.value,
             password: password.value,
-            age: ageValue
+            birth_year: ageValue,
+            phone: phone.value,
+            phone: phone.value,
+
         };
         saved_data.push(saved);
         console.log(saved_data);
@@ -112,7 +116,7 @@ let hasAlerted = false;
 
 window.addEventListener("scroll", () => {
     if (!hasAlerted && (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400)) {
-        alert('Are you sure you want to continue?!');
+        alert('Your location has been breached!');
         hasAlerted = true;
     }
 });
@@ -168,3 +172,6 @@ class Course {
         this.Duration = Duration
     }
 }
+
+
+// 

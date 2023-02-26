@@ -34,7 +34,8 @@ h1 {
     text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.6);
 }
 
-.exclamation {
+.exclamation,
+.emoji {
     width: 100px;
     height: 100px;
     font-size: 50px;
@@ -90,7 +91,6 @@ li {
 }
 
 .btn {
-    margin-top: 15px;
     border-radius: 10%;
     padding: 20px;
     /* width: 15%; */
@@ -101,6 +101,23 @@ button {
     border-radius: 20%;
     padding: 10px;
     background-color: rgb(171, 214, 214);
-    opacity: 0.6;
+    opacity: 0.7;
     font-style: oblique;
+}
+
+.string_tricks,
+.weird_stuff {
+    width: 60vw;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.location {
+    background-color: rgb(171, 214, 214);
+    opacity: 0.8;
+    border: 2px solid grey;
+    border-radius: 10%;
+    padding: 5px;
 }
