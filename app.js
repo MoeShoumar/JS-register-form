@@ -156,6 +156,15 @@ num_btn.addEventListener('click', function () {
 
 // create a class
 
+// course IDs
+const Name = document.getElementById('Name');
+const CRN = document.getElementById('CRN');
+const Duration = document.getElementById('Duration');
+
 class Course {
-    constructor
+    constructor(Name, CRN, Duration) {
+        this.Name = Name
+        this.CRN = CRN
+        this.Duration = Duration
+    }
 }
