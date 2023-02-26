@@ -8,6 +8,7 @@ const error = document.querySelector('#error');
 const locations = document.querySelector('#locations');
 const second_page = document.querySelector('.second_page');
 const num_btn = document.querySelector('#num_btn');
+const age = document.querySelector('#age');
 
 
 // Email and password validation
@@ -18,32 +19,58 @@ const mail_check_dashes = /-/;
 
 let saved_data = []
 form.addEventListener('submit', (e) => {
-    e.preventDefault()
-    let massages = []
+    e.preventDefault();
+
+    let massages = [];
+
     if (email.value === '' || email.value === null ||
         !mail_check.test(email.value) ||
         mail_check_dashes.test(email.value)) {
-        massages.push('wrong email format!')
+        massages.push('wrong email format!');
     }
-    if (password.value === '' || password.value === null
-        || password.value.length < 8 || !specialChar.test(password.value)
-        || !upperCase.test(password.value)) {
-        massages.push('wrong  password format!')
+
+    if (password.value === '' || password.value === null ||
+        password.value.length < 8 || !specialChar.test(password.value) ||
+        !upperCase.test(password.value)) {
+        massages.push('wrong  password format!');
     }
+
     if (massages.length > 0) {
-        e.preventDefault()
-        error.innerHTML = massages.join(', ')
+        e.preventDefault();
+        error.innerHTML = massages.join(', ');
     }
-    else {
+
+    const ageValue = parseInt(age.value);
+
+    if (isNaN(ageValue) || ageValue < 0) {
+        massages.push('wrong age format!');
+    } else if (ageValue > 1) {
+        let isPrime = true;
+        for (let i = 2; i <= Math.sqrt(ageValue); i++) {
+            if (ageValue % i === 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        if (isPrime) {
+            console.log(`${ageValue} is a prime number`);
+        } else {
+            console.log(`${ageValue} is not a prime number`);
+        }
+    }
+
+    if (massages.length === 0) {
         let saved = {
             email: email.value,
-            password: password.value
-        }
+            password: password.value,
+            age: ageValue
+        };
         saved_data.push(saved);
         console.log(saved_data);
     }
+});
 
-})
+
 // save data into a json
 // let h = new Cousrse()
 
@@ -71,7 +98,7 @@ const successCallback = (position) => {
     console.log(position);
     let lat = position.coords.latitude
     let long = position.coords.longitude
-    locations.innerHTML = 'Latitude: ' + lat + "<br>" + 'Longitude:' + long
+    locations.innerHTML = 'Latitude: ' + lat + "<br>" + 'Longitude: ' + long
 }
 
 const errorCallback = (error) => {
@@ -127,5 +154,5 @@ num_btn.addEventListener('click', function () {
     alert("Sorted array: " + sortedArr.join(', '));
 })
 
-// Base case or terminating case
+// year of birth function
 
