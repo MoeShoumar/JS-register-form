@@ -88,3 +88,5 @@ window.addEventListener("scroll", () => {
         hasAlerted = true;
     }
 });
+
+// merge sort for promt
