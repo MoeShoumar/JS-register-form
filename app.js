@@ -10,7 +10,7 @@ const second_page = document.querySelector('.second_page');
 const num_btn = document.querySelector('#num_btn');
 const age = document.querySelector('#age');
 const phone = document.querySelector('#phone');
-
+const reverse = document.querySelector('#str1_btn');
 
 // Email and password validation
 const specialChar = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
@@ -174,4 +174,13 @@ class Course {
 }
 
 
-// 
+//  reverse word
+
+reverse.addEventListener('click', function () {
+    let str_1 = prompt("Enter any letter/number")
+    const str_1_check = /[0-9]/
+    if (!str_1_check.test(str_1.valueOf) || str_1 === '' || str_1 === null) {
+        alert('Enter a combo of letters and numbers for the trick to work!');
+    }
+
+}) 
