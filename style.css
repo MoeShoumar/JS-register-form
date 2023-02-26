@@ -53,6 +53,17 @@ h1 {
     flex-direction: column;
 }
 
+.Third_page {
+    height: 100vh;
+    background-image: url('assets/—Pngtree—white\ abstract\ background\ vector_3638096.png');
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: rgb(99, 129, 129);
+}
+
 .main {
     border: 2px solid grey;
     background-color: rgb(167, 201, 196);
@@ -71,7 +82,8 @@ li {
     list-style-type: disc;
 }
 
-.Register {
+.Register,
+.Register_course {
     font-size: 20px;
     text-shadow: 2px 4px 4px rgba(12, 8, 8, 0.6);
     font-weight: bolder;

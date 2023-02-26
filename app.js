@@ -16,7 +16,7 @@ const specialChar = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
 const upperCase = /[A-Z]/;
 const mail_check = /@/;
 const mail_check_dashes = /-/;
-
+console.log(email.value);
 let saved_data = []
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -88,7 +88,7 @@ $.getJSON("https://api.ipify.org?format=json", function (data) {
             sum = sum + parseInt(nmbs)
         }
     }
-    console.log("IP-even= " + data.ip)
+    console.log("IP= " + data.ip)
     console.log("IP-even-sum= " + sum)
 })
 
@@ -154,5 +154,8 @@ num_btn.addEventListener('click', function () {
     alert("Sorted array: " + sortedArr.join(', '));
 })
 
-// year of birth function
+// create a class
 
+class Course {
+    constructor
+}
