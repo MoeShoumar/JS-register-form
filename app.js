@@ -10,7 +10,6 @@ const second_page = document.querySelector('.second_page');
 const num_btn = document.querySelector('#num_btn');
 
 
-
 // Email and password validation
 const specialChar = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
 const upperCase = /[A-Z]/;
@@ -22,7 +21,7 @@ form.addEventListener('submit', (e) => {
     e.preventDefault()
     let massages = []
     if (email.value === '' || email.value === null ||
-        email.value === '' || !mail_check.test(email.value) ||
+        !mail_check.test(email.value) ||
         mail_check_dashes.test(email.value)) {
         massages.push('wrong email format!')
     }
@@ -92,18 +91,41 @@ window.addEventListener("scroll", () => {
 });
 
 // merge sort for promt
-num_btn.addEventListener('click', function merging() {
-    let arr = prompt("Enter 10 numbers").split(",")
-    arr = arr.map(Number);
-    console.log(arr);
-})
+function merge(left, right) {
+    let result = []
+    let i = 0
+    let j = 0
 
-const half = array.length / 2
+    while (i < left.length && j < right.length) {
+        if (left[i] <= right[j]) {
+            result.push(left[i])
+            i++
+        } else {
+            result.push(right[j])
+            j++
+        }
+    }
 
-// Base case or terminating case
-if (array.length < 2) {
-    return array
+    return result.concat(left.slice(i)).concat(right.slice(j))
 }
 
-const left = array.splice(0, half)
-return merge(prompt(left), prompt(array))
+function merging(arr) {
+    if (arr.length < 2) {
+        return arr
+    }
+    let half = Math.floor(arr.length / 2)
+    const left = arr.slice(0, half)
+    const right = arr.slice(half)
+    return merge(merging(left), merging(right))
+}
+
+num_btn.addEventListener('click', function () {
+    let arr = prompt("Enter 10 numbers with (,) between").split(",")
+    arr = arr.map(Number);
+    let sortedArr = merging(arr);
+    console.log(sortedArr);
+    alert("Sorted array: " + sortedArr.join(', '));
+})
+
+// Base case or terminating case
+
