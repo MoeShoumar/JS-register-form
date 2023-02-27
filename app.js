@@ -211,7 +211,7 @@ str2_btn.addEventListener('click', function () {
         }
 
         else {
-            let str_3 = str_2.slice(i, str_2.length)
+            str_3 = str_2.slice(i, str_2.length)
             break;
         }
 
