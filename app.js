@@ -199,7 +199,7 @@ reverse.addEventListener('click', function () {
 //  the numbers and letters again but I don't know how
 
 // reverse word-2
-let emptyt = '';
+let empty = '';
 const str2_btn = document.getElementById('str2_btn')
 str2_btn.addEventListener('click', function () {
     let str_2 = prompt("Enter any letter combination")
@@ -207,7 +207,7 @@ str2_btn.addEventListener('click', function () {
     for (let i = 0; i < str_2.length; i++) {
         if (str_2[i] !== 'a' && str_2[i] !== 'e' &&
             str_2[i] !== 'o' && str_2[i] !== 'u' && str_2[i] !== 'i') {
-            emptyt += str_2[i]
+            empty += str_2[i]
         }
 
         else {
@@ -216,6 +216,14 @@ str2_btn.addEventListener('click', function () {
         }
 
     }
-    alert(`Reversed word:${str_3}${emptyt}ay`)
+    alert("Reversed word:" + str_3 + empty + "ay")
 
 })
+// JS animation
+const btn = document.querySelector('#num_btn')
+num_btn.addEventListener('mouseover', function () {
+    num_btn.style.backgroundColor = 'yellow';
+});
+num_btn.addEventListener('mouseout', function () {
+    num_btn.style.backgroundColor = '';
+});
