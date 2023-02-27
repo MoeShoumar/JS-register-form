@@ -227,3 +227,12 @@ num_btn.addEventListener('mouseover', function () {
 num_btn.addEventListener('mouseout', function () {
     num_btn.style.backgroundColor = '';
 });
+const weirdStuff = document.querySelector('.weird_stuff');
+btn.addEventListener('click', () => {
+    weirdStuff.animate([
+        { transform: 'rotate(0deg)' },
+        { transform: 'rotate(360deg)' }
+    ], {
+        duration: 1000,
+    });
+});
