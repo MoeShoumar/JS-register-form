@@ -76,12 +76,6 @@ form.addEventListener('submit', (e) => {
         console.log(saved_data);
     }
 });
-
-
-// save data into a json
-// let h = new Cousrse()
-
-
 // Ip-Location
 let sum = 0
 $.getJSON("https://api.ipify.org?format=json", function (data) {
@@ -108,7 +102,7 @@ const successCallback = (position) => {
     locations.innerHTML = 'Latitude: ' + lat + "<br>" + 'Longitude: ' + long
 }
 
-const errorCallback = (error) => {
+const errorCallback = function (error) {
     console.log(error);
 };
 
@@ -117,7 +111,7 @@ navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
 
 let hasAlerted = false;
 
-window.addEventListener("scroll", () => {
+window.addEventListener("scroll", function () {
     if (!hasAlerted && (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400)) {
         alert('Your location has been breached!');
         hasAlerted = true;
@@ -183,12 +177,8 @@ form_2.addEventListener('submit', function (e) {
     const name = Name.value;
     const myCourse = new Course(name, crn, duration);
     console.log(myCourse);
-}
-
-)
-
+})
 //  reverse word
-
 reverse.addEventListener('click', function () {
     let str_1 = prompt("Enter any letter/number")
     const str_1_check = /[0-9]/
