@@ -193,9 +193,29 @@ reverse.addEventListener('click', function () {
         nums.reverse()
         const reversed_nums = splitted.map
     }
-
+    console.log(`${str2}$`);
 })
 // I didn't know how to continue this, I know I need to rejoin
 //  the numbers and letters again but I don't know how
 
 // reverse word-2
+let emptyt = '';
+const str2_btn = document.getElementById('str2_btn')
+str2_btn.addEventListener('click', function () {
+    let str_2 = prompt("Enter any letter combination")
+    let str_3 = '';
+    for (let i = 0; i < str_2.length; i++) {
+        if (str_2[i] !== 'a' && str_2[i] !== 'e' &&
+            str_2[i] !== 'o' && str_2[i] !== 'u' && str_2[i] !== 'i') {
+            emptyt += str_2[i]
+        }
+
+        else {
+            let str_3 = str_2.slice(i, str_2.length)
+            break;
+        }
+
+    }
+    alert(`Reversed word:${str_3}${emptyt}ay`)
+
+})
