@@ -187,11 +187,19 @@ reverse.addEventListener('click', function () {
     if (!str_1_check.test(str_1.valueOf) || str_1 === '' || str_1 === null) {
         alert('Enter a combo of letters and numbers for the trick to work!');
     }
-    else {
+    // else {
 
-    }
-    alert("Reversed numbers:" + str_1_nums + str_1_letter)
+    // }
+    // alert("Reversed numbers:" + str_1_nums + str_1_letter)
 })
+// Pseudo code:
+// loop over the string
+// find the numbers and store them in str_1_nums
+// reverse the numbers through function reverseString(str_1_nums) {
+//     return str_1_nums;
+// }
+// I dont know how to add the numbers back to their original indexes so He4llo3
+// How can I save the index values of the 4 and 3?
 
 
 // reverse word-2
