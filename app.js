@@ -182,21 +182,17 @@ form_2.addEventListener('submit', function (e) {
 reverse.addEventListener('click', function () {
     let str_1 = prompt("Enter any letter/number")
     const str_1_check = /[0-9]/
+    let str_1_nums = ''
+    let str_1_letter = ''
     if (!str_1_check.test(str_1.valueOf) || str_1 === '' || str_1 === null) {
         alert('Enter a combo of letters and numbers for the trick to work!');
     }
     else {
-        const splitted = str_1.split('')
-        const nums = splitted.filter(function isDigit(char) {
-            return str_1_check.test(splitted)
-        })
-        nums.reverse()
-        const reversed_nums = splitted.map
+
     }
-    console.log(`${str2}$`);
+    alert("Reversed numbers:" + str_1_nums + str_1_letter)
 })
-// I didn't know how to continue this, I know I need to rejoin
-//  the numbers and letters again but I don't know how
+
 
 // reverse word-2
 let empty = '';
@@ -219,7 +215,7 @@ str2_btn.addEventListener('click', function () {
     alert("Reversed word:" + str_3 + empty + "ay")
 
 })
-// JS animation
+// JS animations
 const btn = document.querySelector('#num_btn')
 num_btn.addEventListener('mouseover', function () {
     num_btn.style.backgroundColor = 'yellow';
@@ -227,6 +223,15 @@ num_btn.addEventListener('mouseover', function () {
 num_btn.addEventListener('mouseout', function () {
     num_btn.style.backgroundColor = '';
 });
+
+const btn_2 = document.querySelector('#btn')
+btn_2.addEventListener('mouseover', function () {
+    btn_2.style.backgroundColor = 'yellow';
+});
+btn_2.addEventListener('mouseout', function () {
+    btn_2.style.backgroundColor = '';
+});
+
 const weirdStuff = document.querySelector('.weird_stuff');
 btn.addEventListener('click', () => {
     weirdStuff.animate([
